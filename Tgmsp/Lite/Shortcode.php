@@ -80,6 +80,11 @@ class Tgmsp_Lite_Shortcode {
 			wp_enqueue_style( 'soliloquy-style' );
 			add_action( 'wp_footer', array( $this, 'slider_script' ), 99 );
 
+			// CF // (Build action caching workaround)
+			global $soliloquy_post_build_actions;
+			$soliloquy_post_build_actions[] =  $this;
+			// END CF //
+
 			/** Allow devs to circumvent the entire slider if necessary - beware, this filter is powerful - use with caution */
 			$pre = apply_filters( 'tgmsp_pre_load_slider', false, $id, $images, $soliloquy_data, $soliloquy_count, $slider );
 			if ( $pre )
