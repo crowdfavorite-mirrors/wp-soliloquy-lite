@@ -67,11 +67,12 @@ class Tgmsp_Lite_Shortcode {
 		}
 
 		/** Ok, we have a valid slider ID - store all data in one variable and get started */
-		$soliloquy_data[absint( $soliloquy_count )]['id'] 			= $id;
-		$soliloquy_data[absint( $soliloquy_count )]['meta'] 		= get_post_meta( $id, '_soliloquy_settings', true );
-		$slider 													= '';
-		$images 													= $this->get_images( $id, $soliloquy_data[absint( $soliloquy_count )]['meta'] );
-		$i 															= 1;
+		$soliloquy_data[absint( $soliloquy_count )]['id'] 	= $id;
+		$soliloquy_data[absint( $soliloquy_count )]['meta'] = get_post_meta( $id, '_soliloquy_settings', true );
+		$slider 											= '';
+		$images 											= $this->get_images( $id, $soliloquy_data[absint( $soliloquy_count )]['meta'] );
+		$i 													= 1;
+		$preloader											= false;
 
 		/** Only proceed if we have images to output */
 		if ( $images ) {
@@ -172,7 +173,7 @@ class Tgmsp_Lite_Shortcode {
 				$animation 			= isset( $slider['meta']['transition'] ) && 'fade' == $slider['meta']['transition'] ? 'fade' : 'slide';
 
 				?>
-				<script type="text/javascript">jQuery(window).load(function(){jQuery('#soliloquy-<?php echo absint( $slider['id'] ); ?>').flexslider({animation:'<?php echo $animation; ?>',slideshowSpeed:<?php echo isset( $slider['meta']['speed'] ) ? absint( $slider['meta']['speed'] ) : '7000'; ?>,animationDuration:<?php echo isset( $slider['meta']['duration'] ) ? absint( $slider['meta']['duration'] ) : '600'; ?>,controlsContainer:'<?php echo apply_filters( 'tgmsp_slider_controls', '#soliloquy-container-' . absint( $slider['id'] ), $slider['id'] ); ?>',namespace:'soliloquy-',selector:'.soliloquy-slides > li',useCSS:false});});</script>
+				<script type="text/javascript">jQuery(window).load(function(){jQuery('#soliloquy-<?php echo absint( $slider['id'] ); ?>').soliloquy({animation:'<?php echo $animation; ?>',slideshowSpeed:<?php echo isset( $slider['meta']['speed'] ) ? absint( $slider['meta']['speed'] ) : '7000'; ?>,animationDuration:<?php echo isset( $slider['meta']['duration'] ) ? absint( $slider['meta']['duration'] ) : '600'; ?>,controlsContainer:'<?php echo apply_filters( 'tgmsp_slider_controls', '#soliloquy-container-' . absint( $slider['id'] ), $slider['id'] ); ?>',namespace:'soliloquy-',selector:'.soliloquy-slides > li',useCSS:false});});</script>
 				<?php
 			}
 		}
