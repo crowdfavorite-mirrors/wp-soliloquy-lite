@@ -12,7 +12,7 @@ The best responsive WordPress slider plugin. Made lite and free.
 
 Soliloquy, the [best responsive WordPress slider plugin](http://soliloquywp.com/pricing/?utm_source=orgrepo&utm_medium=link&utm_campaign=Soliloquy%2BLite), is now available in its Lite form! Soliloquy is audited by Mark Jaquith, lead developer of WordPress, for security and features the **easiest to use and most performance optimized code for a WordPress slider plugin.** By utilizing custom post types, Soliloquy allows you to create an infinite number of responsive WordPress sliders with an infinite number of images in each slider with a few clicks of the mouse.
 
-**Note: This is the lite version of the Soliloquy WordPress slider. Want even more slider features, including HTML/video slides, complete embedded video support for YouTube and Vimeo, widgets, and access to exclusive Addons (such as full lightbox support and image filters)? [Click here to purchase the best responsive WordPress slider plugin now!](http://soliloquywp.com/pricing/?utm_source=orgrepo&utm_medium=link&utm_campaign=Soliloquy%2BLite).**
+**Note: This is the lite version of the Soliloquy WordPress slider. Want even more WordPress slider features, including HTML/video slides, complete embedded video support for YouTube and Vimeo, widgets, and access to exclusive Addons (such as full lightbox support and image filters)? [Click here to purchase the best responsive WordPress slider plugin now!](http://soliloquywp.com/pricing/?utm_source=orgrepo&utm_medium=link&utm_campaign=Soliloquy%2BLite).**
 
 = Features =
 
@@ -61,8 +61,27 @@ You can get access to more features, Addons and support by [visiting the Soliloq
 
 == Notes ==
 
+Soliloquy is absolutely, positively the [best responsive WordPress slider plugin](http://soliloquywp.com/?utm_source=orgrepo&utm_medium=link&utm_campaign=Soliloquy%2BLite) on the market. It is fast, flexible and solves the problem of responsive sliders in a flash.
+
+= Addons =
+
+Soliloquy has many Addons that extend its default functionality to make it do incredible things.
+
+* (Soliloquy Themes Addon)[http://soliloquywp.com/addons/themes/?utm_source=orgrepo&utm_medium=link&utm_campaign=Soliloquy%2BLite] - beautiful themes for your WordPress slider.
+* (Soliloquy Preview Addon)[http://soliloquywp.com/addons/preview/?utm_source=orgrepo&utm_medium=link&utm_campaign=Soliloquy%2BLite] - get instant previews of your slider straight inside the editing area of the slider.
+* (Soliloquy Lightbox Addon)[http://soliloquywp.com/addons/lightbox/?utm_source=orgrepo&utm_medium=link&utm_campaign=Soliloquy%2BLite] - use powerful lightbox features to enhance the presentation and interaction with your WordPress slider.
+* (Soliloquy Instagram Addon)[http://soliloquywp.com/addons/instagram/?utm_source=orgrepo&utm_medium=link&utm_campaign=Soliloquy%2BLite] - make awesome responsive WordPress sliders from your Instagram photo stream.
+* (Soliloquy Crop Addon)[http://soliloquywp.com/addons/crop/?utm_source=orgrepo&utm_medium=link&utm_campaign=Soliloquy%2BLite] - instantly and dynamically crop images to the size you specify on the fly. No more resizing in Photoshop!
+* (Soliloquy Featured Content Addon)[http://soliloquywp.com/addons/featured-content/?utm_source=orgrepo&utm_medium=link&utm_campaign=Soliloquy%2BLite] - make a gorgeous WordPress slider from you posts, pages and other custom post types.
+* (Soliloquy Pinterest Addon)[http://soliloquywp.com/addons/pinterest/?utm_source=orgrepo&utm_medium=link&utm_campaign=Soliloquy%2BLite] - easily add a "Pin It" button to images in your slider.
+* (Soliloquy Thumbnails Addon)[http://soliloquywp.com/addons/thumbnails/?utm_source=orgrepo&utm_medium=link&utm_campaign=Soliloquy%2BLite] - give your slider easy-to-use and responsive thumbnails.
+* (Soliloquy Filters Addon)[http://soliloquywp.com/addons/filters/?utm_source=orgrepo&utm_medium=link&utm_campaign=Soliloquy%2BLite] - add 25+  awesome filters to images in your WordPress slider.
+* (Soliloquy Carousel Addon)[http://soliloquywp.com/addons/carousel/?utm_source=orgrepo&utm_medium=link&utm_campaign=Soliloquy%2BLite] - transform your default WordPress slider into a responsive and easy-to-use carousel slider.
 
 == Changelog ==
+
+= 1.5.1 =
+* More bug fixes and enhancements.
 
 = 1.5.0 =
 * Bug fixes and enhancements, including upgrade enhancements.
