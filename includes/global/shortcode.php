@@ -117,6 +117,7 @@ class Soliloquy_Shortcode_Lite {
 
         // Load hooks and filters.
         add_shortcode( 'soliloquy', array( $this, 'shortcode' ) );
+        add_filter( 'widget_text', 'do_shortcode' );
 
     }
 
@@ -148,6 +149,12 @@ class Soliloquy_Shortcode_Lite {
         } else {
             // A custom attribute must have been passed. Allow it to be filtered to grab data from a custom source.
             $data = apply_filters( 'soliloquy_custom_slider_data', false, $atts, $post );
+        }
+
+        // If there is no data and the attribute used is an ID, try slug as well.
+        if ( ! $data && isset( $atts['id'] ) ) {
+            $slider_id = $atts['id'];
+            $data      = is_preview() ? $this->base->_get_slider_by_slug( $slider_id ) : $this->base->get_slider_by_slug( $slider_id );
         }
 
         // Allow the data to be filtered before it is stored and used to create the slider output.
@@ -225,6 +232,10 @@ class Soliloquy_Shortcode_Lite {
         // Increment the counter.
         $this->counter++;
 
+        // Add no JS fallback support.
+        $no_js   = apply_filters( 'soliloquy_output_no_js', '<noscript><style type="text/css">#soliloquy-container-' . sanitize_html_class( $data['id'] ) . '{opacity:1}</style></noscript>', $data );
+        $slider .= $no_js;
+
         // Return the slider HTML.
         return apply_filters( 'soliloquy_output', $slider, $data );
 
@@ -249,10 +260,10 @@ class Soliloquy_Shortcode_Lite {
                 $slide = $this->get_image_slide( $id, $item, $data, $i );
                 break;
             case 'video' :
-                $slide = $this->get_video_slide( $id, $item, $data, $i );
+                $slide = '';
                 break;
             case 'html' :
-                $slide = $this->get_html_slide( $id, $item, $data, $i );
+                $slide = '';
                 break;
         }
 
@@ -363,6 +374,7 @@ class Soliloquy_Shortcode_Lite {
                         pause: <?php echo $this->get_config( 'duration', $data ); ?>,
                         auto: 1,
                         useCSS: 0,
+                        keyboard: true,
                         adaptiveHeight: 1,
                         adaptiveHeightSpeed: <?php echo apply_filters( 'soliloquy_adaptive_height_speed', 400, $data ); ?>,
                         infiniteLoop: 1,

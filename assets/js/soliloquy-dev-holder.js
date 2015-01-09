@@ -227,7 +227,6 @@
 			// if "fade" mode, add positioning and z-index CSS
 			if(slider.settings.mode == 'fade'){
 				slider.children.css({
-					position: 'absolute',
 					zIndex: 0,
 					display: 'none',
 					marginRight: '-100%',

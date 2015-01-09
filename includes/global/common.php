@@ -171,7 +171,7 @@ class Soliloquy_Common_Lite {
         global $wpdb;
 
         // Get common vars.
-        $args   = func_get_args();
+        $args   = array( $url, $width, $height, $crop, $align, $quality, $retina );
         $common = $this->get_image_info( $args );
 
         // Unpack variables if an array, otherwise return WP_Error.
@@ -403,6 +403,20 @@ class Soliloquy_Common_Lite {
 
         // Run a hook for Addons to access.
         do_action( 'soliloquy_flush_caches', $post_id, $slug );
+
+    }
+
+    /**
+     * Helper method to return the max execution time for scripts.
+     *
+     * @since 1.0.0
+     *
+     * @param int $time The max execution time available for PHP scripts.
+     */
+    public function get_max_execution_time() {
+
+        $time = ini_get( 'max_execution_time' );
+        return ! $time || empty( $time ) ? (int) 0 : $time;
 
     }
 
